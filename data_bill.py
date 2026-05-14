@@ -25,3 +25,9 @@ if data_usage_gb > TIER_1_DATA_LIMIT_GB:
             total_bill += overage_gb * PREMIUM_USER_OVERAGE_RATE_TIER_2
         else:
             total_bill += overage_gb * REGULAR_USER_OVERAGE_RATE_TIER_2
+    else:
+        overage_gb_tier_2 = TIER_2_DATA_LIMIT_GB - TIER_1_DATA_LIMIT_GB
+        overage_gb_tier_3 = data_usage_gb - TIER_2_DATA_LIMIT_GB
+        if is_premium_user:
+            total_bill += overage_gb_tier_2 * PREMIUM_USER_OVERAGE_RATE_TIER_2
+            total_bill += overage_gb_tier_3 * PREMIUM_USER_OVERAGE_RATE_TIER_3
