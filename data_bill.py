@@ -14,7 +14,7 @@ data_usage_gb = float(input("Enter the data usage in GB: "))
 monthly_plan = int(input("Enter the monthly plan cost: "))
 premium_user_input = input("Is the user a premium user? (yes/no): ").strip().lower()
 is_premium_user = premium_user_input == "yes"
-
+5
 # proccessing monthly bill 
 total_bill = monthly_plan   
 if data_usage_gb > TIER_1_DATA_LIMIT_GB:
