@@ -13,7 +13,6 @@ REGULAR_USER_OVERAGE_RATE_TIER_3 = 3
 data_usage_gb = float(input("Enter the data usage in GB: "))
 monthly_plan = int(input("Enter the monthly plan cost: "))
 premium_user_input = input("Is the user a premium user? (yes/no): ").strip().lower()
-
 is_premium_user = premium_user_input == "yes"
 
 # proccessing monthly bill 
@@ -31,3 +30,12 @@ if data_usage_gb > TIER_1_DATA_LIMIT_GB:
         if is_premium_user:
             total_bill += overage_gb_tier_2 * PREMIUM_USER_OVERAGE_RATE_TIER_2
             total_bill += overage_gb_tier_3 * PREMIUM_USER_OVERAGE_RATE_TIER_3
+        else:
+            total_bill += overage_gb_tier_2 * REGULAR_USER_OVERAGE_RATE_TIER_2
+            total_bill += overage_gb_tier_3 * REGULAR_USER_OVERAGE_RATE_TIER_3
+
+          
+        # output
+print(f"Your total bill is: ${total_bill:.2f}") 
+print("----------------------------------------")
+print("Thank you for using The Moon Data Central!") 
