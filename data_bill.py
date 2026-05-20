@@ -7,7 +7,6 @@ PREMIUM_USER_OVERAGE_RATE_TIER_3 = 2
 REGULAR_USER_OVERAGE_RATE_TIER_3 = 3
 
 
-# Your code goes here:
 
 # The program prompts the user for data usage, monthly plan cost, and whether they are a premium user.
 data_usage_gb = float(input("Enter the data usage in GB: "))
